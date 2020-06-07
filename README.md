@@ -4,6 +4,6 @@
 
 ## Источники
 - [Design by: Saini UIUX Designer](https://www.uplabs.com/posts/happy-meals-food-delivery-app)
-- forked form https://github.com/abuanwar072/Food-App
+- forked from https://github.com/abuanwar072/Food-App
 
 ![](food-demo.gif)
