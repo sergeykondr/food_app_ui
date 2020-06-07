@@ -5,14 +5,13 @@ import 'package:food_app_ui/constants.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
- 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        fontFamily: "Poppins",
+        fontFamily: "Roboto",
         scaffoldBackgroundColor: kWhiteColor,
         primaryColor: kPrimaryColor,
         textTheme: TextTheme(
@@ -44,19 +43,19 @@ class HomeScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(20),
           child: Container(
-            child: Text("Simple way to find \nTasty food", style: Theme.of(context).textTheme.headline5,)),
+            child: Text("Доставка ресторана \nSantina", style: Theme.of(context).textTheme.headline5,)),
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-            CategoryTitle(title: 'All', active: true,),
-            CategoryTitle(title: 'Italian'),
-            CategoryTitle(title: 'Asian'),
-            CategoryTitle(title: 'Russian'),
-            CategoryTitle(title: 'Vietnam'),
-            CategoryTitle(title: 'French'),
-            CategoryTitle(title: 'Germany'),
+            CategoryTitle(title: 'Любая', active: true,),
+            CategoryTitle(title: 'Итальянская'),
+            CategoryTitle(title: 'Азиатская'),
+            CategoryTitle(title: 'Китайская'),
+            CategoryTitle(title: 'Вьетнамская'),
+            CategoryTitle(title: 'Французская'),
+            CategoryTitle(title: 'Немецкая'),
           ],),
         ),
         Container(
@@ -77,7 +76,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               FoodCard(
                 title: 'Вегетарианский салат',
-                calories: 44,
+                calories: 310,
                 image: 'assets/images/image_1.png',
                 description: 'Вегетарианскую еду стоит попробовать хотя бы из любопытства: такой эксперимент не только разнообразит привычный рацион, но и сэкономит время: завтрак из ржаных тостов с авокадо',
                 ingredient: 'С красными томатами',
@@ -85,7 +84,7 @@ class HomeScreen extends StatelessWidget {
               ),
               FoodCard(
                 title: 'Вегетарианский салат',
-                calories: 44,
+                calories: 310,
                 image: 'assets/images/image_1.png',
                 description: 'Вегетарианскую еду стоит попробовать хотя бы из любопытства: такой эксперимент не только разнообразит привычный рацион, но и сэкономит время: завтрак из ржаных тостов с авокадо',
                 ingredient: 'С красными томатами',
@@ -93,7 +92,7 @@ class HomeScreen extends StatelessWidget {
               ),
               FoodCard(
                 title: 'Вегетарианский салат',
-                calories: 44,
+                calories: 310,
                 image: 'assets/images/image_1.png',
                 description: 'Вегетарианскую еду стоит попробовать хотя бы из любопытства: такой эксперимент не только разнообразит привычный рацион, но и сэкономит время: завтрак из ржаных тостов с авокадо',
                 ingredient: 'С красными томатами',
@@ -106,7 +105,7 @@ class HomeScreen extends StatelessWidget {
 
       ],),
       floatingActionButton: Container(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(7),
         height: 60,
         width: 60,
         decoration: BoxDecoration(
@@ -114,12 +113,12 @@ class HomeScreen extends StatelessWidget {
           color: kPrimaryColor.withOpacity(.25)
         ),
         child:  Container(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(12),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: kPrimaryColor
           ),
-          child: SvgPicture.asset('assets/icons/plus.svg'),
+          child: SvgPicture.asset('assets/icons/cart.svg', color: Colors.white,),
         ),
       ),
     );
@@ -149,7 +148,6 @@ class FoodCard extends StatelessWidget {
           Positioned(
             right: 0,
             bottom: 0,
-
             child: Container(
               height: 380,
               width: 250,
